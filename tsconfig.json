@@ -12,8 +12,11 @@
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
     "paths": {
-      "~/*": ["src/*"]
+      "@/*": ["src/*"]
     },
+    "types": [
+      "pinia-plugin-persist"
+    ],
     "skipLibCheck": true
   },
   "vueCompilerOptions": {

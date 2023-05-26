@@ -5,6 +5,11 @@
 //   --ep-color-primary: red;
 // }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: Inter, system-ui, Avenir, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
     "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
@@ -22,4 +27,25 @@ code {
   padding: 2px 4px;
   background-color: var(--ep-color-primary-light-9);
   color: var(--ep-color-primary);
+}
+
+
+#app {
+  width: 100vw;
+  height: 100vh;
+}
+
+.root-content {
+  width: 100%;
+  height: 100%;
+}
+
+.word-break {
+  word-break: break-all
+}
+
+.ellipsis-line {
+  overflow: hidden;
+  text-overflow: ellipsis; //文本溢出显示省略号
+  white-space: nowrap; //文本不会换行
 }

@@ -20,13 +20,23 @@ const pathSrc = path.resolve(__dirname, 'src')
 export default defineConfig({
   resolve: {
     alias: {
-      '~/': `${pathSrc}/`,
+      '@/': `${pathSrc}/`,
     },
+  },
+  server: {
+    host: true,
+    // proxy:{
+    //   '/api': {
+    //     target: 'http://10.218.220.247:9100',
+    //     changeOrigin: true,
+    //     rewrite: (path) => path.replace(/^\/api/, '')
+    //   },
+    // }
   },
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@use "~/styles/element/index.scss" as *;`,
+        additionalData: `@use "@/styles/element/index.scss" as *;`,
       },
     },
   },

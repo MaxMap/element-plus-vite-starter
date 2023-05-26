@@ -1,42 +1,34 @@
 # element-plus-vite-starter
 
-> A starter kit for Element Plus with Vite
+## 技术栈
 
-- Preview: <https://vite-starter.element-plus.org>
+element-plus + ts + router + pinia + unocss
 
-This is an example of on-demand element-plus with [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components).
+## 插件网址
 
-> If you want to import all, it may be so simple that no examples are needed. Just follow [quickstart | Docs](https://element-plus.org/zh-CN/guide/quickstart.html) and import them.
+[unocss](https://alfred-skyblue.github.io/unocss-docs-cn/) 原子 css
 
-If you just want an on-demand import example `manually`, you can check [unplugin-element-plus/examples/vite](https://github.com/element-plus/unplugin-element-plus/tree/main/examples/vite).
+## 规则
 
-## Project setup
+- eslint 校验  
+  lint 命令用于执行 eslint 校验  
+  lint:fix 命令用于执行 eslint 代码格式化
 
-```bash
-npm install
+## 目录结构
+
 ```
+src/
 
-### Compiles and hot-reloads for development
-
-```bash
-npm run dev
+- api 接口
+- assets 静态资源
+- components 全局组件
+- composables 可服用的
+- directives 指令集合
+- layout 布局
+- plugins 插件结合
+- router 路由
+- store 全局状态管理
+- styles 全局样式
+- units 工具
+- views 页面
 ```
-
-### Compiles and minifies for production
-
-```bash
-npm run build
-```
-
-## Usage
-
-```bash
-git clone https://github.com/element-plus/element-plus-vite-starter
-cd element-plus-vite-starter
-npm i
-npm run dev
-```
-
-### Custom theme
-
-See `src/styles/element/index.scss`.
