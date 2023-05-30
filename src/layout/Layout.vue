@@ -1,13 +1,12 @@
 <template>
   <el-container class="common-layout root-content" ref="layoutRef">
     <HeaderCom ref="HeaderRef"></HeaderCom>
-    <el-container class="flex main-content">
+    <el-container
+      class="main-content"
+      :style="{ height: `calc(100vh - ${data.headHeight}px)` }"
+    >
       <SidebarCom></SidebarCom>
-      <el-scrollbar
-        :height="data.contH"
-        wrap-class="main-scroll-body"
-        class="flex-1"
-      >
+      <el-scrollbar wrap-class="main-scroll-body" class="flex-1" height="100%">
         <MainCom></MainCom>
       </el-scrollbar>
     </el-container>
@@ -20,42 +19,25 @@ import SidebarCom from "./components/Sidebar.vue";
 import MainCom from "./components/Main.vue";
 import type { ComponentPublicInstance } from "vue";
 
-import { reactive, ref, onMounted, watchPostEffect } from "vue";
+import { reactive, ref, onMounted } from "vue";
 
 interface Data {
-  contH: number | string;
   headHeight: number;
-  layHeight: number;
 }
 
 const HeaderRef = ref<ComponentPublicInstance | null>(null);
-const layoutRef = ref<ComponentPublicInstance | null>(null);
 const data = reactive<Data>({
-  contH: "auto",
   headHeight: 0,
-  layHeight: 0,
 });
 
 onMounted(() => {
   countHeight();
 });
 
-watchPostEffect(() => {
-  // 判断浏览器高度是否变化--进行重新设置高度
-  if (
-    data.layHeight &&
-    layoutRef.value &&
-    data.layHeight !== layoutRef.value.$el.clientHeight
-  ) {
-    countHeight;
-  }
-});
 /* 获取主要区域的高度 */
 function countHeight() {
-  if (HeaderRef.value && layoutRef.value) {
+  if (HeaderRef.value) {
     data.headHeight = HeaderRef.value.$el.clientHeight;
-    data.layHeight = layoutRef.value.$el.clientHeight;
-    data.contH = data.layHeight - data.headHeight;
   }
 }
 </script>
