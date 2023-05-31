@@ -8,6 +8,8 @@ element-plus + ts + router + pinia + unocss
 
 [unocss](https://alfred-skyblue.github.io/unocss-docs-cn/) 原子 css
 
+[git 规范](https://juejin.cn/post/7042191815801798693#heading-4)
+
 ## 规则
 
 - eslint 校验  
