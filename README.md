@@ -8,7 +8,10 @@ element-plus + ts + router + pinia + unocss
 
 [unocss](https://alfred-skyblue.github.io/unocss-docs-cn/) 原子 css
 
-[git 规范](https://juejin.cn/post/7042191815801798693#heading-4)
+## git 规范
+
+[git 规范](https://juejin.cn/post/6844903793033756680#heading-2)
+命令执行 `git cz`
 
 ## 规则
 
