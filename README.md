@@ -21,7 +21,7 @@ element-plus + ts + router + pinia + unocss
 
 ## 目录结构
 
-```
+```txt
 src/
 
 - api 接口
