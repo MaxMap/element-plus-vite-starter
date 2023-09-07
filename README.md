@@ -19,6 +19,25 @@ element-plus + ts + router + pinia + unocss
   lint 命令用于执行 eslint 校验  
   lint:fix 命令用于执行 eslint 代码格式化
 
+- prettier 格式化
+  1. 选择默认格式化 Prettier - Code formatter (没有可从 插件里下载)
+  2. `npm install prettier -D`
+  3. 配置文件 [./prettierrc.cjs](./prettierrc.cjs),.prettierignore
+  4. `.eslintrc.js` 文件修改
+
+  ```js .eslintrc.js
+  {
+    "plugins": [
+        "prettier"
+    ],
+    "rules": {
+        "prettier/prettier": "error",
+    }
+  }
+  ```
+  5. package.json 设置 `"prettier": "npx prettier --write ./src"`
+
+
 ## 目录结构
 
 ```txt

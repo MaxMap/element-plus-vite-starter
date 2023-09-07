@@ -11,8 +11,9 @@
 }
 
 body {
-  font-family: Inter, system-ui, Avenir, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
-    "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  font-family: Inter, system-ui, Avenir, "Helvetica Neue", Helvetica,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial,
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
@@ -29,7 +30,6 @@ code {
   color: var(--ep-color-primary);
 }
 
-
 #app {
   width: 100vw;
   height: 100vh;
@@ -41,7 +41,7 @@ code {
 }
 
 .word-break {
-  word-break: break-all
+  word-break: break-all;
 }
 
 .ellipsis-line {

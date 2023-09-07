@@ -19,9 +19,11 @@ module.exports = {
     },
     "plugins": [
         "vue",
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "prettier"
     ],
     "rules": {
+        "prettier/prettier": "error",
         "no-unused-vars": "off",//未使用的变量
         "@typescript-eslint/no-unused-vars": ["off"],//未使用的变量
         "@typescript-eslint/no-explicit-any": ["off"],

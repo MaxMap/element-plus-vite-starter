@@ -35,6 +35,6 @@ export const registerResponseInterceptors = (axiosInstance: AxiosInstance) => {
         duration: 5 * 1000,
       });
       return Promise.reject(error);
-    }
+    },
   );
 };

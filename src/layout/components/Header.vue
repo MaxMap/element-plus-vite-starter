@@ -4,11 +4,10 @@
   </el-header>
 </template>
 
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <style scoped lang="scss">
-.l-el-header{
+.l-el-header {
   padding: 0;
 }
 .layoutHeader {
